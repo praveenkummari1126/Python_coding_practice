@@ -15,7 +15,7 @@ while len(s)!=0:
   for i in range(1, len(s)):
     #start looking 2nd char to its previus character and so on
     if s[i] not in s[:i]:
-      continue
+      result=s[:i+1]
     else:
     #if any duplicate occure we will store upto valid characters and break loop
       result=s[:i]
@@ -30,4 +30,5 @@ while len(s)!=0:
       substrings.append(result)
   #remove the previous characters
   s=s[i:]
+
 print("the substring for this string is(are): ", substrings)
